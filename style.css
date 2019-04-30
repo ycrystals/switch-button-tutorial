@@ -1,0 +1,47 @@
+body {
+	background-color: #f3f3f3;
+}
+
+.container {
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+
+#switch-button {
+	/*remove abttribute of button to the same div element */
+	-webkit-appearance: none;
+	appearance: none;
+	width: 86px;
+	height: 40px;
+	background-color: #bbb;
+	border-radius: 50px;
+	border: 1px solid #666;
+	outline: none;
+	position: relative;
+
+}
+
+#switch-button:checked {
+	background-color: #A9FFCB;
+	border: 1px solid #999;
+	transition: 0.7s;
+}
+
+#switch-button::before {
+	content: "";
+	width: 41px;
+	height: 38px;
+	background-color: #fff;
+	position: absolute;
+	border-radius: 50%;
+	top: 0;
+	left: 0;
+	transition: 0.5s;
+}
+
+#switch-button:checked::before {
+	left: 43px;
+}
